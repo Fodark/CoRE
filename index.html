@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="SEO">
+  <meta name="description" content="CoRE: Retrieval-enriched zero-shot image classification in low-resource domains">
   <meta name="keywords" content="kw">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TITLE</title>
+  <title>Retrieval-enriched zero-shot image classification in low-resource domains</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -26,278 +24,174 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://fodark.xyz">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="other1">
-            other1
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TITLE</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="">Nicola Dall'Asen</a><sup>1,2</sup>,</span>
-            <span class="author-block">
-              <a href="">Author 2</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="">Author 3</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Author 4</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Author 5</a><sup>2</sup>,
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Trento,</span>
-            <span class="author-block"><sup>2</sup>University of Pisa</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/xxyy.zzzzz.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
+            <h1 class="title is-1 publication-title">Retrieval-enriched zero-shot image classification in low-resource
+              domains</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">Nicola Dall'Asen</a><sup>1,2</sup></span>
+              <span class="author-block">
+                <a href="">Yiming Wang</a><sup>3</sup></span>
+              <span class="author-block">
+                <a href="">Enrico Fini</a><sup>4</sup></span>
               </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/xxyy.zzzzz"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
+              <span class="author-block">
+                <a href="">Elisa Ricci</a><sup>1,3</sup></span>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v="
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/fodark/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/fodark/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Trento</span>
+              <span class="author-block"><sup>2</sup>University of Pisa</span>
+              <span class="author-block"><sup>3</sup>Fondazione Bruno Kessler</span>
+              <span class="author-block"><sup>4</sup>Apple Inc</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/xxyy.zzzzz.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Coming Soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/xxyy.zzzzz" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/Fodark/CoRE" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/fodark/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data (Coming Soon)</span>
+                  </a>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">TITLE</span> caption.
-      </h2>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Abstract.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Subs1</h2>
-          <p>
-            
-          </p>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Subs2</h2>
-        <div class="columns is-centered">
-          <div class="column content">
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
             <p>
+              Low-resource domains, characterized by scarce data and annotations, present significant challenges for
+              language and visual understanding tasks, with the latter much under-explored in the literature. Recent
+              advancements in Vision-Language Models (VLM) have shown promising results in high-resource domains but
+              fall short in low-resource concepts that are under-represented (e.g. only a handful of images per
+              category)
+              in the pre-training set.
+              We tackle the challenging task of zero-shot low-resource image classification from a novel perspective. By
+              leveraging a retrieval-based strategy, we achieve this in a training-free fashion.
+              Specifically, our method, named CoRE (Combination of Retrieval Enrichment), enriches the representation of
+              both query
+              images and class prototypes by retrieving relevant textual information from large web-crawled databases.
+              This retrieval-based enrichment significantly boosts classification performance by incorporating the
+              broader contextual information relevant to the specific class.
+              We validate our method on a newly established benchmark covering diverse low-resource domains, including
+              medical imaging, rare plants, and circuits. Our experiments demonstrate that CoRE outperforms
+              existing state-of-the-art methods that rely on synthetic data generation and model fine-tuning.
             </p>
           </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
 
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <img src="./static/images/method.png" alt="CoRE" />
+          <div class="content has-text-justified">
+            <p>
+              Our CoRE enriches both the image embedding z<sub>q</sub> and the class prompts p with retrieved captions
+              from a large-scale web-crawled database D. We weight the retrieved captions &Tau; with
+              their
+              similarity scores S<sup>T</sup>, which we skew with controllable temperatures &tau;<sub>i2t</sub> and
+              &tau;<sub>t2t</sub>. By combining the retrieved captions embedding with the original representations W and
+              q
+              through &alpha; and &beta;, we obtain enriched representations W<sup>+</sup> and z<sub>q</sub><sup>+</sup>
+              which we employ for
+              zero-shot classification.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{dallasen2024core,
+  title={Retrieval-enriched zero-shot image classification in low-resource domains},
+  author={Nicola Dall'Asen and Yiming Wang and Enrico Fini and Elisa Ricci},
+  year={2024},
+  booktitle={Empirical Methods in Natural Language Processing (EMNLP)}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/fodark" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Subs3</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Subs3.1</h3>
-        <div class="content has-text-justified">
-          <p>
-            
-          </p>
-        </div>
-        
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Subs3.4</h3>
-        <div class="content has-text-justified">
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{}</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/fodark" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
