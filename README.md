@@ -4,6 +4,8 @@
 
 # Retrieval-enriched zero-shot image classification in low-resource domains
 
+## EMNLP 2024 (Main)
+
 [Nicola Dall'Asen](https://scholar.google.com/citations?user=e7lgiYYAAAAJ), [Yiming Wang](https://scholar.google.com/citations?user=KBZ3zrEAAAAJ), [Enrico Fini](https://scholar.google.com/citations?user=OQMtSKIAAAAJ), [Elisa Ricci](https://scholar.google.com/citations?user=xf1T870AAAAJ)
 
 ______________________________________________________________________
@@ -35,6 +37,9 @@ pip install -r requirements.txt
 - [COYO700M](https://huggingface.co/datasets/kakaobrain/coyo-700m)
 
 ### Preprocess datasets
+
+For CC12M look at [CC12M preprocessing](src/preprocessing/cc12m_mistral.py)
+For COYO700M look at [COYO preprocessing](src/preprocessing/coyo_mistral.py)
 
 ______________________________________________________________________
 
