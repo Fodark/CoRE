@@ -27,6 +27,8 @@ pip install -r requirements.txt
 
 ## Datasets
 
+Download the relevant datasets from the following links.
+
 - [Circuits](https://github.com/xiaobai1217/Low-Resource-Vision)
 - [HAM10000](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)
 - [iNaturalist](https://github.com/visipedia/inat_comp/blob/master/2021/README.md)
@@ -38,17 +40,35 @@ pip install -r requirements.txt
 
 ## Preprocess datasets
 
+To build the textual databases to compute image-to-text and text-to-text retrieval, look at the following files.
+
 ### SigLIP for image-to-text retrieval
 
 For CC12M look at [CC12M preprocessing SigLIP](src/preprocessing/cc12m_siglip.py)
+
 For COYO700M look at [COYO preprocessing SigLIP](src/preprocessing/coyo_siglip.py)
 
 ### Mistral for text-to-text retrieval
 
 For CC12M look at [CC12M preprocessing Mistral](src/preprocessing/cc12m_mistral.py)
+
 For COYO700M look at [COYO preprocessing Mistral](src/preprocessing/coyo_mistral.py)
 
 Then look at the awesome guide by (Alessandro Conti)\[https://github.com/altndrr/vic/issues/8#issuecomment-1594732756\] to create the fast FAISS index with the embeddings.
+
+### Already-computed databases
+
+We will shortly release our pre-computed databases for the two datasets above.
+
+## CoRE
+
+## Custom datasets
+
+You just need to create 3 csv files like those you can find in [the artifacts folder](artifacts/data/), specifying the index to class name, the "train" samples and the test samples.
+
+### Image-to-text retrieval
+
+Run [Image-to-text retrieval](src/core/core_img2txt_retrieval.py) specifying the dataset, the split of the dataset, and which database you want to use (e.g. `coyo_siglip` or `cc12m_siglip`).
 
 ______________________________________________________________________
 
