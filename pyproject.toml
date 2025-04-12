@@ -1,0 +1,57 @@
+[tool.black]
+line_length = 120
+
+[tool.flake8]
+count = true
+ignore = ["E402"]
+per-file-ignores = ["__init__.py:F401"]
+exclude = ["data/*","logs/*"]
+max-line-length = 120
+
+[tool.interrogate]
+fail-under = 100
+ignore-init-module = true
+ignore-init-method = true
+ignore-magic = true
+ignore-module = true
+ignore-nested-functions = true
+
+[tool.flit.module]
+name = "src"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pytest.ini_options]
+addopts = [
+  "--color=yes",
+  "--durations=0",
+  "--strict-markers",
+  "--doctest-modules",
+]
+filterwarnings = [
+  "ignore::DeprecationWarning",
+  "ignore::UserWarning",
+]
+log_cli = "True"
+markers = [
+  "slow: slow tests",
+  "train: tests that train models",
+]
+minversion = "6.0"
+testpaths = "tests/"
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: nocover",
+    "raise NotImplementedError",
+    "raise NotImplementedError()",
+    "if __name__ == .__main__.:",
+]
+
+[tool.bandit]
+skips = ["B311"]
+
+[tool.codespell]
+ignore-words-list = "wit"
