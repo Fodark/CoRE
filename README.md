@@ -68,7 +68,13 @@ You just need to create 3 csv files like those you can find in [the artifacts fo
 
 ### Image-to-text retrieval
 
-Run [Image-to-text retrieval](src/core/core_img2txt_retrieval.py) specifying the dataset, the split of the dataset, and which database you want to use (e.g. `coyo_siglip` or `cc12m_siglip`).
+Run [Image-to-text retrieval](src/core/core_img2txt_retrieval.py) specifying the dataset, the split of the dataset, and which database you want to use (e.g. `coyo_siglip` or `cc12m_siglip`). The resulting embeddings will be stored in `retrieved_embeddings`.
+
+### Text-to-text retrieval
+
+First run [Text-to-text retrieval](src/core/core_txt2txt_retrieval.py), specifyint the dataset, the database to use, and the embedding model. If you want to specify a custom dataset with custom retrieval prompt, modify `dataset_data` in this file. The resulting embeddings will be stored in `results`.
+
+Once you obtain the embeddings, you can build the retrieved zero-shot weights with different temperatures by running [the create zero-shot script](src/core/core_zeroshot_from_retrieved.py) by specifying which model has been used (siglip/mistral), the dataset, and the suffix indicating whether you used the `common` object names (for Circuits and HAM10000) or the `premerged` (merged common/scientific names) for iNaturalist.
 
 ______________________________________________________________________
 
