@@ -20,9 +20,16 @@ ______________________________________________________________________
 ## Env setup
 
 ```bash
-python -m venv .core
-source .core/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+or with `uv`
+
+```bash
+uv sync
+source .venv/bin/activate
 ```
 
 ## Datasets
@@ -62,7 +69,7 @@ We will shortly release our pre-computed databases for the two datasets above.
 
 ## CoRE
 
-## Custom datasets
+#### Custom datasets
 
 You just need to create 3 csv files like those you can find in [the artifacts folder](artifacts/data/), specifying the index to class name, the "train" samples and the test samples.
 
