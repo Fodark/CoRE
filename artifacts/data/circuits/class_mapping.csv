@@ -1,0 +1,33 @@
+id,name
+0,others
+1,audio amplifier/amplifier
+2,converter/power supply/charger/inverter
+3,mosquito repellent
+4,infrared sensor
+5,(infrared) controller
+6,lock
+7,alarm
+8,meter/sensor/monitor/tester
+9,LED
+10,timer
+11,dice/toss/random number generator
+12,(AM/FM/infrared/RF) transmitter
+13,(AM/FM/infrared/RF) receiver
+14,sound generator/tone control/tone generator
+15,switch
+16,protector
+17,counter
+18,indicator
+19,bell/buzzer/ringer/horn/siren/beeper
+20,audio mixer
+21,warmer
+22,wave generator/signal generator/multivibrator
+23,(motor) driver
+24,signal converter
+25,signal fader
+26,relay
+27,UPS
+28,jammer
+29,limiter/regulator
+30,fan
+31,intercom
