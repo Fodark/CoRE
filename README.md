@@ -36,10 +36,19 @@ pip install -r requirements.txt
 - [CC12M webdataset](https://huggingface.co/datasets/pixparse/cc12m-wds)
 - [COYO700M](https://huggingface.co/datasets/kakaobrain/coyo-700m)
 
-### Preprocess datasets
+## Preprocess datasets
 
-For CC12M look at [CC12M preprocessing](src/preprocessing/cc12m_mistral.py)
-For COYO700M look at [COYO preprocessing](src/preprocessing/coyo_mistral.py)
+### SigLIP for image-to-text retrieval
+
+For CC12M look at [CC12M preprocessing SigLIP](src/preprocessing/cc12m_siglip.py)
+For COYO700M look at [COYO preprocessing SigLIP](src/preprocessing/coyo_siglip.py)
+
+### Mistral for text-to-text retrieval
+
+For CC12M look at [CC12M preprocessing Mistral](src/preprocessing/cc12m_mistral.py)
+For COYO700M look at [COYO preprocessing Mistral](src/preprocessing/coyo_mistral.py)
+
+Then look at the awesome guide by (Alessandro Conti)\[https://github.com/altndrr/vic/issues/8#issuecomment-1594732756\] to create the fast FAISS index with the embeddings.
 
 ______________________________________________________________________
 
