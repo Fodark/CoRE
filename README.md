@@ -76,6 +76,16 @@ First run [Text-to-text retrieval](src/core/core_txt2txt_retrieval.py), specifyi
 
 Once you obtain the embeddings, you can build the retrieved zero-shot weights with different temperatures by running [the create zero-shot script](src/core/core_zeroshot_from_retrieved.py) by specifying which model has been used (siglip/mistral), the dataset, and the suffix indicating whether you used the `common` object names (for Circuits and HAM10000) or the `premerged` (merged common/scientific names) for iNaturalist.
 
+### Enriched zero-shot predictions
+
+Lastly, you can use the image-to-text retrieval and the text-to-text retrieval to run the enriched zero-shot predictions using [this script](src/core/core.py).
+
+You need to specify: the dataset, the database used for image-to-text retrieval (cc12m/coyo), the dataset split (train/test), the alpha and beta values to test for the merging (can be floats or lists) and the temperature for the image-to-text retrieval weight distribution computation.
+
+For the text-to-text retrieval part, look at line 17 onwards to load your saved retrieved zero-shot weights, you have to specify the temperature used to extract those (WIP: infer from the file name).
+
+The output will be the parameters that led to the best Acc@1, if you run the script on the train split then you can use the output parameters on your test split.
+
 ______________________________________________________________________
 
 If you find our research useful, please cite us as:
